@@ -1,0 +1,141 @@
+/* Reset some basic styles for consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Styling the body */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    background-image: url(3.jpg);
+  }
+  
+  /* Styling the header */
+  .header {
+    background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient background */
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Styling the header title */
+  .header-title {
+    font-size: 3em; /* Larger font size for prominence */
+    font-weight: 700; /* Bold weight */
+    font-family: 'Montserrat', sans-serif; /* Use a clean, modern font */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  /* Styling the main content */
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Full height minus the header */
+  }
+  
+  /* Styling the about section */
+  .about-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 600px;
+    width: 100%; /* Ensure it does not exceed max width */
+    text-align: left;
+  }
+  
+  /* Styling the section title */
+  .section-title {
+    font-size: 2em; /* Larger font size */
+    font-weight: 700; /* Bold weight */
+    font-family: 'Montserrat', sans-serif; /* Use a clean, modern font */
+    margin-bottom: 20px;
+    color: #6e8efb; /* Matching color from the header gradient */
+  }
+  
+  /* Styling the about info */
+  .about-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between items */
+  }
+  
+  /* Styling each info item */
+  .info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Styling the labels and values */
+  .info-label {
+    font-weight: 700; /* Bold weight */
+    color: #6e8efb; /* Matching color from the header gradient */
+    flex: 1; /* Allow the label to take up space evenly */
+  }
+  
+  .info-value {
+    font-weight: 400; /* Normal weight */
+    flex: 2; /* Allow the value to take up more space */
+    text-align: left;
+  }
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .header {
+      padding: 30px 0;
+    }
+  
+    .header-title {
+      font-size: 2.5em;
+    }
+  
+    .about-section {
+      padding: 20px;
+    }
+  
+    .section-title {
+      font-size: 1.8em;
+    }
+  
+    .about-info {
+      gap: 10px; /* Reduced space between items for smaller screens */
+    }
+  
+    .info-item {
+      flex-direction: column; /* Stack labels and values vertically on small screens */
+      align-items: flex-start;
+    }
+  
+    .info-label, .info-value {
+      flex: none; /* Remove flex properties */
+      text-align: left;
+    }
+  }
+  span{
+    color: #6e8efb;
+    font-weight: bold;
+
+  }
+li{
+  list-style: none;
+}
+/* Styling the footer */
+.footer {
+  /* Dark background color */
+ color: #fff; /* White text color */
+ text-align: center;
+ padding: 15px 0; /* Reduced padding for a smaller footer */
+ margin-top: 20px; /* Margin for space above the footer */
+ box-shadow: 5px -5px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.footer-text {
+  font-size: 0.9em;
+}

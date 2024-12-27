@@ -1,0 +1,90 @@
+/* Reset some basic styles for consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(3.jpg);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Styling the header */
+.header {
+    background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient background */
+    color: white;
+    text-align: center;
+    padding: 15px 0; /* Reduced padding for a closer header */
+    margin-top: 0; /* Remove any default margin */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Styling the header title */
+.header-title {
+    font-size: 2.5em; /* Larger font size for prominence */
+    font-weight: 700; /* Bold weight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Styling the main content */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Full height minus the header */
+}
+
+/* Styling the certifications section */
+.certifications-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between certification cards */
+    justify-content: center;
+}
+
+/* Styling each certification card */
+.certification-card {
+    background-color: white;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden;
+    max-width: 100%; /* Maximum width for the cards */
+    text-align: center;
+    height: 500px;
+    border-collapse: collapse;
+    border: 6px  #a777e3 groove;
+}
+.certification-card img {
+    width: 100%; /* Make the image take up the full width of the card */
+    max-height: 400px; /* Max height to ensure it fits within the card */
+    object-fit: cover; /* Ensure the image covers the entire area without distortion */
+    border: 12px  #a777e3 groove; /* Slightly darker border for contrast */
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.1) ;
+}
+
+.certification-title {
+    padding: 15px;
+    font-weight: 500; /* Medium weight */
+    font-size: 1.2em;
+    color: #333;
+    background-color: #f4f4f9; /* Slightly off-white background */
+}
+
+/* Styling the footer */
+.footer {
+    /* Dark background color */
+   color: #fff; /* White text color */
+   text-align: center;
+   padding: 15px 0; /* Reduced padding for a smaller footer */
+   margin-top: 20px; /* Margin for space above the footer */
+   box-shadow: 5px -5px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+ }
+ 
+.footer-text {
+    font-size: 0.9em;
+}
