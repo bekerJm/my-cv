@@ -12,6 +12,8 @@ body {
     color: #333;
     line-height: 1.6;
     padding: 20px;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Styling the header */
