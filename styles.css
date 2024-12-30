@@ -1,312 +1,302 @@
+/* Base styles */
 * {
-    box-sizing: border-box;
-  }
-#div1{
-    position: absolute;
-    top: 2%;
-    left: 2%;
-    width: 100%;
+  box-sizing: border-box;
 }
-.contacth1{
-    font-size: 100px;
-    font-family: 'Gill Sans',sans-serif;
-    font-weight: bold;
+
+:root {
+  --color-primary: #4f67f6;
 }
-.contacth2{
-    font-size: 50px;
-    font-family: 'Gill Sans',sans-serif;
-    position: absolute;
-    font-weight: lighter;
-    top:50% ;
+
+body {
+  font-family: "Euclid Circular A", "Poppins", sans-serif;
+  background: linear-gradient(225deg, #4f67f6, #27387f);
+  color: white;
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-image: url(3.jpg);
+  background-size: cover;
+  background-position: center;
 }
-.cnt:hover{
-    text-decoration: underline;
+
+/* Navigation bar */
+nav {
+  position: relative;
+  background: rgba(39, 42, 51, 0.4);
+  font-weight: 400;
+  font-size: 0;
+  display: flex;
+  padding: 0;
+  width: 80%;
+  margin: 0 auto;
+  bottom: 130px;
 }
-#div2{
-    font-size: 20px;
-    position: absolute;
-    top:27%;
-    left: 2%;
+
+nav .item {
+  font-size: 0.8rem;
+  display: inline-block;
+  position: relative;
+  padding: 0 20px;
+  cursor: pointer;
+  z-index: 5;
+  min-width: 25%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
 }
-#div3{
-    font-size: 20px;
-    position: absolute;
-    top:30%;
-    left: 2%;
+
+.dropdown {
+  overflow: hidden;
+  list-style: none;
+  position: absolute;
+  padding: 0;
+  width: 100%;
+  left: 0;
+  top: 62px;
 }
-  :root {
-    --color-primary: #4f67f6;
-  }
-  
-  body {
-    font-family: "Euclid Circular A", "Poppins";
-    background: linear-gradient(225deg, #4f67f6, #27387f);
-    color: white;
-    margin: 0;
-    height: 100vh;
-    display: grid;
-    place-items: center;
-    background-image: url(3.jpg);
-  }
-  
-  nav {
-    position: relative;
-    background: rgba(39, 42, 51, 0.4);
-    font-weight: 400;
-    font-size: 0;
-    display: flex;
-    padding: 0;
-    width: 80%;
-    bottom: 130px;
-  }
-  
-  nav .item {
-    font-size: 0.8rem;
-    display: inline-block;
-    position: relative;
-    padding: 0 20px;
-    cursor: pointer;
-    z-index: 5;
-    min-width: 25%;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-  }
-  
-  .dropdown {
-    overflow: hidden;
-    list-style: none;
-    position: absolute;
-    padding: 0;
-    width: 100%;
-    left: 0;
-    top: 62px;
-  }
-  .dropdown > div {
-    translate: 0 -100%;
-    transition: all 0.5s 0.1s;
-    position: relative;
-  }
-  
-  .dropdown a {
-    display: block;
-    padding: 0;
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    background: var(--color-primary);
-  }
-  
-  .dropdown a:hover {
-    background: #445adc;
-  }
-  
-  .underline {
-    height: 6px;
-    background: var(--color-primary);
-    position: absolute;
-    bottom: 0;
-    width: 25%;
-    z-index: 2;
-    pointer-events: none;
-    transition: 0.35s;
-  }
-  nav .item:hover > .dropdown > div {
-    translate: 0;
-  }
-a{
-    text-decoration:none;
-    color: white;
+
+.dropdown > div {
+  translate: 0 -100%;
+  transition: all 0.5s 0.1s;
+  position: relative;
 }
-  
-  nav .item:nth-child(1):hover ~ .underline {
-    translate: 0;
-  }
-  
-  nav .item:nth-child(2):hover ~ .underline {
-    translate: 100%;
-  }
-  
-  nav .item:nth-child(3):hover ~ .underline {
-    translate: 200%;
-  }
-  
-  nav .item:nth-child(4):hover ~ .underline {
-    translate: 300%;
-  }
-  /* Container for the buttons */
+
+.dropdown a {
+  display: block;
+  padding: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background: var(--color-primary);
+}
+
+.dropdown a:hover {
+  background: #445adc;
+}
+
+.underline {
+  height: 6px;
+  background: var(--color-primary);
+  position: absolute;
+  bottom: 0;
+  width: 25%;
+  z-index: 2;
+  pointer-events: none;
+  transition: 0.35s;
+}
+
+nav .item:hover > .dropdown > div {
+  translate: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+nav .item:nth-child(1):hover ~ .underline {
+  translate: 0;
+}
+
+nav .item:nth-child(2):hover ~ .underline {
+  translate: 100%;
+}
+
+nav .item:nth-child(3):hover ~ .underline {
+  translate: 200%;
+}
+
+nav .item:nth-child(4):hover ~ .underline {
+  translate: 300%;
+}
+
+/* Buttons */
 .button-container {
-    display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; /* Center vertically */
-    margin-right: 85%;
-  }
-  
-  /* Generic button styling */
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px 0; /* Margin between buttons */
-    font-size: 1.2em;
-    font-family: 'Arial', sans-serif;
-    text-decoration: none;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 200px; /* Fixed width for consistency */
-    text-align: center;
-  }
-  
-  /* Specific styles for each button */
-  .facebook {
-    background-color: #3b5998; /* Facebook blue */
-  }
-  
-  .instagram {
-    background-color: #E4405F; /* Instagram pink */
-  }
-  
-  .linkedin {
-    background-color: #0077B5; /* LinkedIn blue */
-  }
-  
-  /* Hover effect for buttons */
-  .button:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    opacity: 0.9; /* Slightly reduce opacity on hover */
-  }
-  
-  /* Optional: Add some responsiveness */
-  @media (max-width: 600px) {
-    .button {
-      width: 100%; /* Full width on small screens */
-    }
-  }
-/* Styling the header */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 0px;
+  position: relative;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 0;
+  font-size: 1.2em;
+  font-family: 'Arial', sans-serif;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 200px;
+  text-align: center;
+  margin-right: 1em;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.instagram {
+  background-color: #E4405F;
+}
+
+.linkedin {
+  background-color: #0077B5;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Header */
 .header {
   display: flex;
   align-items: center;
-  justify-content: center; /* Center align the content */
-  padding: 35px; /* Increased padding for more space */
-  background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient background */
+  justify-content: center;
+  padding: 35px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
   color: white;
-  border-bottom: 5px solid #e7e7e7; /* Subtle border at the bottom */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-bottom: 5px solid #e7e7e7;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Styling the profile photo */
 .profile-photo {
-  height: 200px; /* Increased height for a more prominent photo */
-  width: 200px; /* Maintain aspect ratio */
-  border-radius: 50%; /* Make the photo circular */
-  margin-right: 40px; /* Increased space between photo and title */
-  border: 4px solid white; /* White border for contrast */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-right: 40px;
+  border: 4px solid white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect for the profile photo */
 .profile-photo:hover {
-  transform: scale(1.1); /* Slightly enlarge on hover */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Styling the header title */
 .header-title {
-  font-size: 4em; /* Increased font size for prominence */
-  font-weight: 700; /* Bold weight */
-  font-family: 'Montserrat', sans-serif; /* Use a clean, modern font */
-  color: white; /* White color for text */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  font-size: 4em;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Optional: Add some responsiveness */
-@media (max-width: 600px) {
-  .header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 30px; /* Adjusted padding for smaller screens */
-  }
-
-  .profile-photo {
-    height: 150px; /* Adjusted height for smaller screens */
-    width: 150px; /* Maintain aspect ratio */
-    margin-right: 0; /* Remove right margin on small screens */
-    margin-bottom: 20px; /* Add bottom margin for spacing */
-  }
-
-  .header-title {
-    font-size: 3em; /* Adjusted font size for smaller screens */
-  }
-}
-/* Styling the footer */
+/* Footer */
 .footer {
-   /* Dark background color */
-  color: #fff; /* White text color */
+  color: #fff;
   text-align: center;
-  padding: 15px 0; /* Reduced padding for a smaller footer */
-  margin-top: 20px; /* Margin for space above the footer */
-  box-shadow: 5px -5px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 15px 0;
+  margin-top: 20px;
+  box-shadow: 5px -5px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Styling the quote container */
 .quote-container {
-  max-width: 600px; /* Max width to constrain the content */
-  margin: 0 auto; /* Center the container */
-  padding: 0 20px; /* Padding for responsive design */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Styling the quote text */
 .quote-text {
-  font-size: 1.2em; /* Smaller font size */
-  font-weight: 300; /* Light weight for a modern look */
-  font-family: 'Montserrat', sans-serif; /* Use a clean, modern font */
-  margin-bottom: 5px; /* Reduced space between text and author */
-  line-height: 1.4; /* Line height for readability */
+  font-size: 1.2em;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 5px;
+  line-height: 1.4;
 }
 
-/* Styling the quote author */
 .quote-author {
-  font-size: 1em; /* Smaller font size */
-  font-weight: 600; /* Semi-bold weight for emphasis */
-  font-family: 'Roboto', sans-serif; /* Use a clean, modern font */
-  color: #6e8efb; /* Matching color from the header gradient */
+  font-size: 1em;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  color: #6e8efb;
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .quote-text {
-    font-size: 1em; /* Adjusted font size for smaller screens */
-  }
-
-  .quote-author {
-    font-size: 0.9em; /* Adjusted font size for smaller screens */
-  }
-}
 .footer-text {
   font-size: 0.9em;
 }
-/* Styles for smaller screens (e.g., tablets and phones) */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
 
-  .container {
-    flex-direction: column;
-    align-items: center;
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .header-title {
+      font-size: 3.5em;
+  }
+  .profile-photo {
+      height: 180px;
+      width: 180px;
+  }
+}
+
+@media (max-width: 992px) {
+  nav {
+      width: 90%;
+  }
+  .header-title {
+      font-size: 3em;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+  }
+  .profile-photo {
+      height: 150px;
+      width: 150px;
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+  .header-title {
+      font-size: 2.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+      font-size: 14px;
+  }
+  .button {
+      width: 100%;
+  }
+  .quote-text {
+      font-size: 1em;
+  }
+  .quote-author {
+      font-size: 0.9em;
   }
 }
 
 @media (max-width: 480px) {
   body {
-    font-size: 12px;
+      font-size: 12px;
   }
-
   .container {
-    padding: 10px;
+      padding: 10px;
   }
+  .header-title {
+      font-size: 2em;
+  }
+  .footer {
+      padding: 10px 0;
+  }
+}
+.contacth1{
+  font-size: 5em;
+}
+.contacth2{
+  font-size: 2em;
+}
+.cnt:hover{
+  text-decoration: underline;
+  color: burlywood;
 }
